@@ -1,0 +1,18 @@
+.site-layout .site-layout-background {
+    background: #fff;
+}
+.site-layout i{
+    margin-left: 20px;
+}
+.site-layout .drop-Down{
+    margin-left: 20px;
+}
+.site-layout .topnav{
+    text-align: end;
+}
+
+@media only screen and (max-width: 767px) {
+    .site-layout .topnav{
+        text-align: start;
+    }
+  }

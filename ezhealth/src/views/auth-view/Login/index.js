@@ -1,11 +1,16 @@
 import React from 'react'
 import { Form, Input, Button, Row, Col, Card, Layout } from 'antd';
-import './login.css'
+
+
+import './login.css';
+
 import Hands from '../../../Assets/hands.jpg'
-const Login = () => {
+
+const Login = (props) => {
     const [form] = Form.useForm();
     const onFinish = (values) => {
         console.log(values);
+        props.history.push('/dashboard')
     }
     return (
         <Layout>
@@ -36,12 +41,20 @@ const Login = () => {
 
                                     <Input placeholder="User Id" />
                                 </Form.Item>
-                                <Form.Item name="password">
+                                <Form.Item name="password"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please input your password!',
+                                        },
+
+                                    ]}
+                                >
                                     <Input.Password placeholder="Password" />
                                 </Form.Item>
                                 <Form.Item>
                                     <Button type="primary" htmlType="submit">
-                                        Submit
+                                        Login
                                     </Button>
                                 </Form.Item>
                             </Form>

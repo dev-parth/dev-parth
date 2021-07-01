@@ -10,7 +10,7 @@ const TheLayout = () => {
         <div>
             <TheHeader />
             <TheContent />
-            <TheFooter />
+            {/* <TheFooter /> */}
         </div>
     )
 }

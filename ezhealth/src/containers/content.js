@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Layout } from 'antd';
 // routes config
+import './container.css';
 import routes from "../routes";
 
 const loading = (
@@ -14,7 +15,7 @@ const { Content } = Layout;
 const TheContent = () => {
     return (
         <Layout>
-            <Content>
+            <Content className="app-contain">
                 <Suspense fallback={loading}>
                     <Switch>
                         {
